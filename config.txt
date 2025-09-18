@@ -1,0 +1,42 @@
+AI 設定說明 (AI Configuration Instructions)
+=========================================
+
+你好！這個檔案是為了方便你修改遊戲中使用的 AI 模型而建立的。
+Hello! This file is to help you easily modify the AI models used in the game.
+
+由於網頁應用程式的技術限制，我們無法直接讀取這個 .txt 檔案。
+Due to the technical limitations of a web application, we cannot read this .txt file directly.
+
+但是，你可以透過修改另一個檔案來輕鬆更改設定：
+However, you can easily change the settings by modifying another file:
+
+請打開 (Please open): config.ts
+
+你會在該檔案中看到類似以下的內容：
+In that file, you will see content similar to this:
+
+--------------------------------------------------
+export const AI_CONFIG = {
+  // ... (說明文字 / descriptive comments) ...
+  TEXT_MODEL: 'gemini-2.5-flash',
+
+  // ... (說明文字 / descriptive comments) ...
+  IMAGE_MODEL: 'imagen-4.0-generate-001',
+};
+--------------------------------------------------
+
+如何修改 (How to modify):
+- 你只需要修改引號內的模型名稱即可。
+  You only need to change the model name inside the single quotes.
+- 例如，若要更換文字模型，請更改 'gemini-2.5-flash'
+  For example, to change the text model, change 'gemini-2.5-flash'.
+- 請勿修改 TEXT_MODEL 或 IMAGE_MODEL 這些變數名稱。
+  Do NOT change the variable names like TEXT_MODEL or IMAGE_MODEL.
+
+API 金鑰 (API Key):
+- 依照 Google AI Studio 的安全規範，API 金鑰必須設定在環境變數中 (API_KEY)。
+  According to Google AI Studio security guidelines, the API Key must be set as an environment variable (API_KEY).
+- 當你在 GitHub Pages 或其他平台部署時，請參考該平台的說明來設定環境變數。
+  When you deploy on GitHub Pages or other platforms, please refer to their documentation on how to set up environment variables.
+- 請勿將你的 API 金鑰直接寫在任何程式碼檔案中。
+  Do not write your API key directly into any code file.
